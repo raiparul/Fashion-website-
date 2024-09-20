@@ -1,0 +1,1 @@
+The Fashion E-Commerce Site is a web-based platform designed for users to browse, purchase, and sell fashion products. The site provides an interactive and user-friendly experience for customers, vendors, and administrators.
