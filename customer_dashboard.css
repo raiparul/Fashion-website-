@@ -1,0 +1,77 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: url('../uploads/customer_dashboared.png.png') no-repeat center center/cover;
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container Styling */
+.container {
+    background: rgba(255, 255, 255, 0.7); /* Adjusted to be semi-transparent */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Heading Styling */
+.container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Paragraph Styling */
+.container p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Button Styling */
+.container a.btn {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.container a.btn-secondary {
+    background-color: #6c757d;
+}
+
+.container a.btn-danger {
+    background-color: #dc3545;
+}
+
+.container a.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.container a.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.container a.btn-danger:hover {
+    background-color: #c82333;
+}

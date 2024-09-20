@@ -1,0 +1,215 @@
+/* Reset some default styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for the body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+/* Header and Navbar */
+header {
+    background-color: #ffffff;
+    padding: 0;
+    height: 70px;
+}
+
+.navbar {
+    padding: 10px 20px; /* Reduced padding for a slimmer look */
+    border-bottom: 1px solid #dee2e6;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand .logo {
+    max-height: 50px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.navbar-brand:hover .logo {
+    transform: rotate(360deg);
+}
+
+/* Hero Section */
+.hero {
+    background: url('../uploads/banner.png.png') no-repeat center center/cover;
+    color: #ffffff;
+    text-align: center;
+    padding: 80px 0; /* Adjusted padding to reduce space */
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out 0.5s forwards;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out 1s forwards;
+}
+
+.hero .btn {
+    font-size: 1.2rem;
+    padding: 10px 30px;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out 1.5s forwards;
+}
+
+/* Featured Products */
+.featured-products {
+    background-color: #ffffff;
+    padding: 50px 0;
+}
+
+.featured-products .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.featured-products .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.featured-products .card {
+    position: relative;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    margin: 15px;
+    max-width: 300px;
+    background: #f8f9fa;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.featured-products .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+}
+
+.featured-products .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.featured-products .card:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+.featured-products .card-body {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.featured-products .card-body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.featured-products .card-body:hover::after {
+    opacity: 1;
+}
+
+.featured-products .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #343a40;
+}
+
+.featured-products .card-text {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #6c757d;
+}
+
+.featured-products .card-body .btn {
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.featured-products .card-body .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .hero .btn {
+        font-size: 1rem;
+        padding: 8px 20px;
+    }
+
+    .featured-products .card {
+        max-width: 100%;
+    }
+}
